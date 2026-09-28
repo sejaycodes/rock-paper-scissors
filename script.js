@@ -38,16 +38,17 @@ function playRound(humanChoice, computerChoice){
         console.log('You win! Scissors beats paper')
         humanScore++;
     }else if(humanChoice === 'scissors' && computerChoice === 'rock'){
-        console.log('You lose! Rock beats Paper')
+        console.log('You lose! Rock beats Scissors')
         computerScore++;
     }else if(humanChoice === 'rock' && computerChoice === 'scissors'){
-        console.log('You win! Rock beats Paper')
+        console.log('You win! Rock beats Scissors')
         humanScore++;
     }
 }
 
 function playGame(){
     for(let i = 0; i < 5; i++){
+        console.log('-- Round ${i + 1} --')
         playRound(getHumanChoice(), getComputerChoice())
     }
     console.log('Your Score: ' + humanScore)
