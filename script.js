@@ -10,5 +10,9 @@ function getHumanChoice(){
     console.log(choice)
 }
 
+let humanScore = 0;
+let computerScore = 0
+
+
 getComputerChoice()
 getHumanChoice()
