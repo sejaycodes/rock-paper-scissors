@@ -1,18 +1,22 @@
 function getComputerChoice(){
     const randomNum = Math.floor(Math.random() * 3) + 1;
-    console.log(randomNum)
+    
+    return randomNum;
 }
 
 function getHumanChoice(){
-    const humanNum = prompt("Enter: ")
-    const choice = Number(humanNum)
+    const humanChoice = prompt("Enter 'Rock' | 'Paper' | 'Scissors': ")
+    const choice = humanChoice.toLowerCase();
 
-    console.log(choice)
+    return humanChoice;
 }
 
 let humanScore = 0;
 let computerScore = 0
 
 
-getComputerChoice()
-getHumanChoice()
+function playRound(getComputerChoice, getHumanChoice){
+
+}
+
+playRound(getComputerChoice(), getComputerChoice())
