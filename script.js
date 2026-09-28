@@ -48,11 +48,19 @@ function playRound(humanChoice, computerChoice){
 
 function playGame(){
     for(let i = 0; i < 5; i++){
-        console.log('-- Round ${i + 1} --')
+        console.log(`-- Round ${i + 1} --`)
         playRound(getHumanChoice(), getComputerChoice())
     }
     console.log('Your Score: ' + humanScore)
     console.log('Computer Score: ' + computerScore)
+
+    if(humanScore > computerScore){
+        console.log('You won the match')
+    }else if(computerScore > humanScore){
+        console.log('You lost')
+    }else{
+        console.log('The match is a tie')
+    }
 }
 
 playGame()
