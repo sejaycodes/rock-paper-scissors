@@ -12,12 +12,6 @@ function getComputerChoice(){
     return choice;
 }
 
-function getHumanChoice(){
-    const humanChoice = prompt("Enter 'Rock' | 'Paper' | 'Scissors': ").toLowerCase()
-
-    return humanChoice;
-}
-
 let humanScore = 0;
 let computerScore = 0
 
@@ -46,11 +40,17 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
-function playGame(){
+
+function playGame(playerSelection){
+    /*
     for(let i = 0; i < 5; i++){
         console.log(`-- Round ${i + 1} --`)
         playRound(getHumanChoice(), getComputerChoice())
     }
+    */
+
+    playRound(playerSelection, getComputerChoice())
+
     console.log('Your Score: ' + humanScore)
     console.log('Computer Score: ' + computerScore)
 
@@ -62,5 +62,15 @@ function playGame(){
         console.log('The match is a tie')
     }
 }
+
+const rockBtn = document.querySelector('#rock')
+const paperBtn = document.querySelector('#paper')
+const scissorsBtn = document.querySelector('#scissors')
+
+rockBtn.addEventListener('click', playGame('rock'))
+paperBtn.addEventListener('click', playGame('paper'))
+scissorsBtn.addEventListener('click', playGame('scissors'))
+
+
 
 playGame()
